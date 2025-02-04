@@ -35,7 +35,7 @@ public class ParametroRacaService implements GenericService<ParametroRaca, Param
             }
         }
 
-        logger.info("Retrieved {} ParametroRaca entities", list.size());
+        logger.info("Recuperado a lista de {} entidades.", list.size());
         return list;
     }
 
@@ -50,7 +50,7 @@ public class ParametroRacaService implements GenericService<ParametroRaca, Param
             }
         }
 
-        logger.info("Retrieved {} ParametroRaca entities", list.size());
+        logger.info("Recuperado a lista de {} entidades.", list.size());
         return list;
     }
 
@@ -61,7 +61,7 @@ public class ParametroRacaService implements GenericService<ParametroRaca, Param
         ParametroRaca raca = repository.findByNome(dado.getNome());
 
         if (raca != null) {
-            throw new AplicacaoException("ParametroRaca with this name already exists.");
+            throw new AplicacaoException("Raça já parametrizada.");
         }
 
         raca = ParametroRaca.fromDTO(dado);
@@ -75,7 +75,7 @@ public class ParametroRacaService implements GenericService<ParametroRaca, Param
         ParametroRaca raca = repository.findByNome(dado.getNome());
 
         if (raca == null) {
-            throw new AplicacaoException("ParametroRaca not found.");
+            throw new AplicacaoException("Raça não parametrizada.");
         }
 
         raca = ParametroRaca.fromDTO(dado);
@@ -88,7 +88,7 @@ public class ParametroRacaService implements GenericService<ParametroRaca, Param
 
     @Override
     public void delete(Integer id) {
-        logger.info("Deleting ParametroRaca with ID: {}", id);
+        logger.info("Apagando raça parametrizada de id: {}", id);
         repository.deleteById(id);
     }
 
@@ -96,19 +96,19 @@ public class ParametroRacaService implements GenericService<ParametroRaca, Param
     public ParametroRacaDTO getById(Integer id) {
         logger.info("Retrieving ParametroRaca with ID: {}", id);
         ParametroRaca raca = repository.findById(id)
-                .orElseThrow(() -> new AplicacaoException("ParametroRaca not found."));
+                .orElseThrow(() -> new AplicacaoException("Raça parametrizada não encontrada."));
         return ParametroRacaDTO.fromEntity(raca);
     }
 
     @Override
     public void delete(Integer id, String usuario) {
-        logger.info("User {} is deleting ParametroRaca with ID: {}", usuario, id);
+        logger.info("O Usuário {} apagou a raça parametrizada de id: {}", usuario, id);
         repository.deleteById(id);
     }
 
     private void validateParametroRacaDTO(ParametroRacaDTO dado) {
         if (dado == null || dado.getNome() == null || dado.getNome().isEmpty()) {
-            throw new AplicacaoException("ParametroRaca name cannot be null or empty.");
+            throw new AplicacaoException("Campo nome não pode ser nulo.");
         }
     }
 }
