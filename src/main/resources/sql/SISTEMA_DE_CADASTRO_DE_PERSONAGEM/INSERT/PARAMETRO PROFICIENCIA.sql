@@ -1,0 +1,36 @@
+USE SISTEMA_DE_CADASTRO_DE_PERSONAGEM;
+
+INSERT INTO `sistema_de_cadastro_de_personagem`.`parametro_proficiencia`
+(`NOME_PROFICIENCIA`,`TIPO_PROFICIENCIA`)
+VALUES
+('Armas Simples', 1),
+('Armas Marciais ', 1),
+( 'Armadura Leve', 2),
+( 'Armadura Média', 2),
+( 'Armadura Pesada',2),
+( 'Escudo', 2),
+('Abissal', 3),
+('Anão', 3),
+('Celestial', 3), 
+('Comum', 3 ), 
+ ('Dialeto Subterrâneo', 3), 
+ ('Dracônico', 3),
+ ('Elfico', 3 ),
+ ('Gigante', 3 ), 
+ ('Gnômico', 3 ),
+ ('Goblin', 3),
+ ('Halfling', 3),
+('Infernal', 3 ),
+('Orc', 3 ), 
+('Primordial', 3 ), 
+ ('Silvestre', 3), 
+ ('Subcomum', 3),
+ ('Ferramenta de artesão', 4),
+ ('Ferramentas de navegação', 4),
+ ('Ferramentas de ladrão', 4), 
+ ('Instrumento musical', 4),
+('Kit de disfarce', 4 ),
+('Kit de falsificação',4),
+('Kit de herbalismo',4),
+('Kit de jogo',4),
+('Kit de venenos',4);
