@@ -23,27 +23,26 @@ public class HabilidadeService implements GenericService<Habilidade, HabilidadeD
     }
 
     @Override
-    public HabilidadeDTO update(Long id, HabilidadeDTO dado) {
+    public HabilidadeDTO update(Integer id, HabilidadeDTO dado) {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public void delete(Long id) {
+    public void delete(Integer id) {
         // TODO Auto-generated method stub
         
     }
 
     @Override
-    public HabilidadeDTO getById(Long id) {
+    public HabilidadeDTO getById(Integer id) {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public void delete(Long id, String usuario) {
+    public void delete(Integer id, String usuario) {
         // TODO Auto-generated method stub
         
     }
-
 }

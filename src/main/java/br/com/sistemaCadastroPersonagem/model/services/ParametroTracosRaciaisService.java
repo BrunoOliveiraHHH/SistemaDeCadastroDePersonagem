@@ -24,25 +24,25 @@ public class ParametroTracosRaciaisService implements GenericService<ParametroTr
     }
 
     @Override
-    public ParametroTracosRaciaisDTO update(Long id, ParametroTracosRaciaisDTO dado) {
+    public ParametroTracosRaciaisDTO update(Integer id, ParametroTracosRaciaisDTO dado) {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public void delete(Long id) {
+    public void delete(Integer id) {
         // TODO Auto-generated method stub
         
     }
 
     @Override
-    public ParametroTracosRaciaisDTO getById(Long id) {
+    public ParametroTracosRaciaisDTO getById(Integer id) {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public void delete(Long id, String usuario) {
+    public void delete(Integer id, String usuario) {
         // TODO Auto-generated method stub
         
     }

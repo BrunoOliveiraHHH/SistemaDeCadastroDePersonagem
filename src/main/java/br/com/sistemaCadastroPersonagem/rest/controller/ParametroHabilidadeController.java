@@ -33,7 +33,7 @@ public class ParametroHabilidadeController {
     }
 
     @GetMapping(value = "/consulta/{id}", produces = MediaType.APPLICATION_JSON)
-    public ResponseEntity<ParametroHabilidadeDTO> getById(@PathVariable Long id) {
+    public ResponseEntity<ParametroHabilidadeDTO> getById(@PathVariable Integer id) {
         ParametroHabilidadeDTO dto = this.service.getById(id);
         return new ResponseEntity<ParametroHabilidadeDTO>(dto, HttpStatus.OK);
     }
@@ -45,14 +45,14 @@ public class ParametroHabilidadeController {
     }
 
     @PutMapping(value = "/alterar/{id}", produces = MediaType.APPLICATION_JSON, consumes = MediaType.APPLICATION_JSON)
-    public ResponseEntity<ParametroHabilidadeDTO> update(@PathVariable Long id, @RequestBody ParametroHabilidadeDTO dtoInput) {
+    public ResponseEntity<ParametroHabilidadeDTO> update(@PathVariable Integer id, @RequestBody ParametroHabilidadeDTO dtoInput) {
         ParametroHabilidadeDTO dto = this.service.update(id, dtoInput);
         return new ResponseEntity<ParametroHabilidadeDTO>(dto, HttpStatus.NO_CONTENT);
     }
 
     @SuppressWarnings("rawtypes")
     @GetMapping(value = "/excluir/{id},{usuario}")
-    public ResponseEntity delete(@PathVariable Long id, @PathVariable String usuario) {
+    public ResponseEntity delete(@PathVariable Integer id, @PathVariable String usuario) {
         service.delete(id, usuario);
         return new ResponseEntity(HttpStatus.OK);
     }

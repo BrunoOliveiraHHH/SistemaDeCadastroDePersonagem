@@ -33,7 +33,7 @@ public class PersonagemController {
     }
 
     @GetMapping(value = "/consulta/{id}", produces = MediaType.APPLICATION_JSON)
-    public ResponseEntity<PersonagemDTO> getById(@PathVariable Long id) {
+    public ResponseEntity<PersonagemDTO> getById(@PathVariable Integer id) {
         PersonagemDTO dto = this.service.getById(id);
         return new ResponseEntity<PersonagemDTO>(dto, HttpStatus.OK);
     }
@@ -45,14 +45,14 @@ public class PersonagemController {
     }
 
     @PutMapping(value = "/alterar/{id}", produces = MediaType.APPLICATION_JSON, consumes = MediaType.APPLICATION_JSON)
-    public ResponseEntity<PersonagemDTO> update(@PathVariable Long id, @RequestBody PersonagemDTO dtoInput) {
+    public ResponseEntity<PersonagemDTO> update(@PathVariable Integer id, @RequestBody PersonagemDTO dtoInput) {
         PersonagemDTO dto = this.service.update(id, dtoInput);
         return new ResponseEntity<PersonagemDTO>(dto, HttpStatus.NO_CONTENT);
     }
 
     @SuppressWarnings("rawtypes")
     @GetMapping(value = "/excluir/{id},{usuario}")
-    public ResponseEntity delete(@PathVariable Long id, @PathVariable String usuario) {
+    public ResponseEntity delete(@PathVariable Integer id, @PathVariable String usuario) {
         service.delete(id, usuario);
         return new ResponseEntity(HttpStatus.OK);
     }

@@ -23,25 +23,25 @@ public class ParametroProficienciaService implements GenericService<ParametroPro
     }
 
     @Override
-    public ParametroProficienciaDTO update(Long id, ParametroProficienciaDTO dado) {
+    public ParametroProficienciaDTO update(Integer id, ParametroProficienciaDTO dado) {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public void delete(Long id) {
+    public void delete(Integer id) {
         // TODO Auto-generated method stub
         
     }
 
     @Override
-    public ParametroProficienciaDTO getById(Long id) {
+    public ParametroProficienciaDTO getById(Integer id) {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public void delete(Long id, String usuario) {
+    public void delete(Integer id, String usuario) {
         // TODO Auto-generated method stub
         
     }

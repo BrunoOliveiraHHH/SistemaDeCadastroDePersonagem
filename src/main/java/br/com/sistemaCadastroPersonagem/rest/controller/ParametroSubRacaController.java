@@ -33,7 +33,7 @@ public class ParametroSubRacaController {
     }
 
     @GetMapping(value = "/consulta/{id}", produces = MediaType.APPLICATION_JSON)
-    public ResponseEntity<ParametroSubRacaDTO> getById(@PathVariable Long id) {
+    public ResponseEntity<ParametroSubRacaDTO> getById(@PathVariable Integer id) {
         ParametroSubRacaDTO dto = this.service.getById(id);
         return new ResponseEntity<ParametroSubRacaDTO>(dto, HttpStatus.OK);
     }
@@ -45,14 +45,14 @@ public class ParametroSubRacaController {
     }
 
     @PutMapping(value = "/alterar/{id}", produces = MediaType.APPLICATION_JSON, consumes = MediaType.APPLICATION_JSON)
-    public ResponseEntity<ParametroSubRacaDTO> update(@PathVariable Long id, @RequestBody ParametroSubRacaDTO dtoInput) {
+    public ResponseEntity<ParametroSubRacaDTO> update(@PathVariable Integer id, @RequestBody ParametroSubRacaDTO dtoInput) {
         ParametroSubRacaDTO dto = this.service.update(id, dtoInput);
         return new ResponseEntity<ParametroSubRacaDTO>(dto, HttpStatus.NO_CONTENT);
     }
 
     @SuppressWarnings("rawtypes")
     @GetMapping(value = "/excluir/{id},{usuario}")
-    public ResponseEntity delete(@PathVariable Long id, @PathVariable String usuario) {
+    public ResponseEntity delete(@PathVariable Integer id, @PathVariable String usuario) {
         service.delete(id, usuario);
         return new ResponseEntity(HttpStatus.OK);
     }

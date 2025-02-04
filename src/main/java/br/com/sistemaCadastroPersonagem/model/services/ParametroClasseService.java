@@ -23,27 +23,26 @@ public class ParametroClasseService implements GenericService<ParametroClasse, P
     }
 
     @Override
-    public ParametroClasseDTO update(Long id, ParametroClasseDTO dado) {
+    public ParametroClasseDTO update(Integer id, ParametroClasseDTO dado) {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public void delete(Long id) {
+    public void delete(Integer id) {
         // TODO Auto-generated method stub
         
     }
 
     @Override
-    public ParametroClasseDTO getById(Long id) {
+    public ParametroClasseDTO getById(Integer id) {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public void delete(Long id, String usuario) {
+    public void delete(Integer id, String usuario) {
         // TODO Auto-generated method stub
         
     }
-
 }

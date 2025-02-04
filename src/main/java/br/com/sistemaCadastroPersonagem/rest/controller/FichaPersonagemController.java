@@ -34,7 +34,7 @@ public class FichaPersonagemController {
     }
 
     @GetMapping(value = "/consulta/{id}", produces = MediaType.APPLICATION_JSON)
-    public ResponseEntity<FichaPersonagemDTO> getById(@PathVariable Long id) {
+    public ResponseEntity<FichaPersonagemDTO> getById(@PathVariable Integer id) {
         FichaPersonagemDTO dto = this.service.getById(id);
         return new ResponseEntity<FichaPersonagemDTO>(dto, HttpStatus.OK);
     }
@@ -46,14 +46,14 @@ public class FichaPersonagemController {
     }
 
     @PutMapping(value = "/alterar/{id}", produces = MediaType.APPLICATION_JSON, consumes = MediaType.APPLICATION_JSON)
-    public ResponseEntity<FichaPersonagemDTO> update(@PathParam("id") Long id, @RequestBody FichaPersonagemDTO dtoInput) {
+    public ResponseEntity<FichaPersonagemDTO> update(@PathParam("id") Integer id, @RequestBody FichaPersonagemDTO dtoInput) {
         FichaPersonagemDTO dto = this.service.update(id, dtoInput);
         return new ResponseEntity<FichaPersonagemDTO>(dto, HttpStatus.NO_CONTENT);
     }
 
     @SuppressWarnings("rawtypes")
     @GetMapping(value = "/excluir/{id},{usuario}")
-    public ResponseEntity delete(@PathParam("id") Long id, @PathParam("usuario") String usuario) {
+    public ResponseEntity delete(@PathParam("id") Integer id, @PathParam("usuario") String usuario) {
         service.delete(id, usuario);
         return new ResponseEntity(HttpStatus.OK);
     }

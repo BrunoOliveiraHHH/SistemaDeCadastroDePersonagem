@@ -33,7 +33,7 @@ public class ParametroTracosRaciaisController {
     }
 
     @GetMapping(value = "/consulta/{id}", produces = MediaType.APPLICATION_JSON)
-    public ResponseEntity<ParametroTracosRaciaisDTO> getById(@PathVariable Long id) {
+    public ResponseEntity<ParametroTracosRaciaisDTO> getById(@PathVariable Integer id) {
         ParametroTracosRaciaisDTO dto = this.service.getById(id);
         return new ResponseEntity<ParametroTracosRaciaisDTO>(dto, HttpStatus.OK);
     }
@@ -45,14 +45,14 @@ public class ParametroTracosRaciaisController {
     }
 
     @PutMapping(value = "/alterar/{id}", produces = MediaType.APPLICATION_JSON, consumes = MediaType.APPLICATION_JSON)
-    public ResponseEntity<ParametroTracosRaciaisDTO> update(@PathVariable Long id, @RequestBody ParametroTracosRaciaisDTO dtoInput) {
+    public ResponseEntity<ParametroTracosRaciaisDTO> update(@PathVariable Integer id, @RequestBody ParametroTracosRaciaisDTO dtoInput) {
         ParametroTracosRaciaisDTO dto = this.service.update(id, dtoInput);
         return new ResponseEntity<ParametroTracosRaciaisDTO>(dto, HttpStatus.NO_CONTENT);
     }
 
     @SuppressWarnings("rawtypes")
     @GetMapping(value = "/excluir/{id},{usuario}")
-    public ResponseEntity delete(@PathVariable Long id, @PathVariable String usuario) {
+    public ResponseEntity delete(@PathVariable Integer id, @PathVariable String usuario) {
         service.delete(id, usuario);
         return new ResponseEntity(HttpStatus.OK);
     }

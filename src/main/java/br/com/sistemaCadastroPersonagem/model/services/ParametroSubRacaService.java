@@ -23,25 +23,25 @@ public class ParametroSubRacaService implements GenericService<ParametroSubRaca,
     }
 
     @Override
-    public ParametroSubRacaDTO update(Long id, ParametroSubRacaDTO dado) {
+    public ParametroSubRacaDTO update(Integer id, ParametroSubRacaDTO dado) {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public void delete(Long id) {
+    public void delete(Integer id) {
         // TODO Auto-generated method stub
         
     }
 
     @Override
-    public ParametroSubRacaDTO getById(Long id) {
+    public ParametroSubRacaDTO getById(Integer id) {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public void delete(Long id, String usuario) {
+    public void delete(Integer id, String usuario) {
         // TODO Auto-generated method stub
         
     }

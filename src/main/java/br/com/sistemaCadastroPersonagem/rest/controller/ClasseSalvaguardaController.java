@@ -33,7 +33,7 @@ public class ClasseSalvaguardaController {
     }
 
     @GetMapping(value = "/consulta/{id}", produces = MediaType.APPLICATION_JSON)
-    public ResponseEntity<ClasseSalvaguardaDTO> getById(@PathVariable Long id) {
+    public ResponseEntity<ClasseSalvaguardaDTO> getById(@PathVariable Integer id) {
         ClasseSalvaguardaDTO dto = this.service.getById(id);
         return new ResponseEntity<ClasseSalvaguardaDTO>(dto, HttpStatus.OK);
     }
@@ -45,14 +45,14 @@ public class ClasseSalvaguardaController {
     }
 
     @PutMapping(value = "/alterar/{id}", produces = MediaType.APPLICATION_JSON, consumes = MediaType.APPLICATION_JSON)
-    public ResponseEntity<ClasseSalvaguardaDTO> update(@PathVariable Long id, @RequestBody ClasseSalvaguardaDTO dtoInput) {
+    public ResponseEntity<ClasseSalvaguardaDTO> update(@PathVariable Integer id, @RequestBody ClasseSalvaguardaDTO dtoInput) {
         ClasseSalvaguardaDTO dto = this.service.update(id, dtoInput);
         return new ResponseEntity<ClasseSalvaguardaDTO>(dto, HttpStatus.NO_CONTENT);
     }
 
     @SuppressWarnings("rawtypes")
     @GetMapping(value = "/excluir/{id},{usuario}")
-    public ResponseEntity delete(@PathVariable Long id, @PathVariable String usuario) {
+    public ResponseEntity delete(@PathVariable Integer id, @PathVariable String usuario) {
         service.delete(id, usuario);
         return new ResponseEntity(HttpStatus.OK);
     }

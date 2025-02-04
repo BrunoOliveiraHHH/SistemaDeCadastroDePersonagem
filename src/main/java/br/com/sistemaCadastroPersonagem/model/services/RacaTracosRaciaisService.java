@@ -23,25 +23,25 @@ public class RacaTracosRaciaisService implements GenericService<RacaTracosRaciai
     }
 
     @Override
-    public RacaTracosRaciaisDTO update(Long id, RacaTracosRaciaisDTO dado) {
+    public RacaTracosRaciaisDTO update(Integer id, RacaTracosRaciaisDTO dado) {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public void delete(Long id) {
+    public void delete(Integer id) {
         // TODO Auto-generated method stub
         
     }
 
     @Override
-    public RacaTracosRaciaisDTO getById(Long id) {
+    public RacaTracosRaciaisDTO getById(Integer id) {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public void delete(Long id, String usuario) {
+    public void delete(Integer id, String usuario) {
         // TODO Auto-generated method stub
         
     }

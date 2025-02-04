@@ -33,7 +33,7 @@ public class ParametroPericiaController {
     }
 
     @GetMapping(value = "/consulta/{id}", produces = MediaType.APPLICATION_JSON)
-    public ResponseEntity<ParametroPericiaDTO> getById(@PathVariable Long id) {
+    public ResponseEntity<ParametroPericiaDTO> getById(@PathVariable Integer id) {
         ParametroPericiaDTO dto = this.service.getById(id);
         return new ResponseEntity<ParametroPericiaDTO>(dto, HttpStatus.OK);
     }
@@ -45,14 +45,14 @@ public class ParametroPericiaController {
     }
 
     @PutMapping(value = "/alterar/{id}", produces = MediaType.APPLICATION_JSON, consumes = MediaType.APPLICATION_JSON)
-    public ResponseEntity<ParametroPericiaDTO> update(@PathVariable Long id, @RequestBody ParametroPericiaDTO dtoInput) {
+    public ResponseEntity<ParametroPericiaDTO> update(@PathVariable Integer id, @RequestBody ParametroPericiaDTO dtoInput) {
         ParametroPericiaDTO dto = this.service.update(id, dtoInput);
         return new ResponseEntity<ParametroPericiaDTO>(dto, HttpStatus.NO_CONTENT);
     }
 
     @SuppressWarnings("rawtypes")
     @GetMapping(value = "/excluir/{id},{usuario}")
-    public ResponseEntity delete(@PathVariable Long id, @PathVariable String usuario) {
+    public ResponseEntity delete(@PathVariable Integer id, @PathVariable String usuario) {
         service.delete(id, usuario);
         return new ResponseEntity(HttpStatus.OK);
     }

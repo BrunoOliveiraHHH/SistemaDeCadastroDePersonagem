@@ -23,27 +23,26 @@ public class ParametroHabilidadeService implements GenericService<ParametroHabil
     }
 
     @Override
-    public ParametroHabilidadeDTO update(Long id, ParametroHabilidadeDTO dado) {
+    public ParametroHabilidadeDTO update(Integer id, ParametroHabilidadeDTO dado) {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public void delete(Long id) {
+    public void delete(Integer id) {
         // TODO Auto-generated method stub
         
     }
 
     @Override
-    public ParametroHabilidadeDTO getById(Long id) {
+    public ParametroHabilidadeDTO getById(Integer id) {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public void delete(Long id, String usuario) {
+    public void delete(Integer id, String usuario) {
         // TODO Auto-generated method stub
         
     }
-
 }

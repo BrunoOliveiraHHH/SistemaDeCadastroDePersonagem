@@ -8,12 +8,12 @@ public interface GenericService<E,D> {
 
 	D create(D dado);
 
-	D update(Long id, D dado);
+	D update(Integer id, D dado);
 
-	void delete(Long id);
+	void delete(Integer id);
 
-	D getById(Long id);
+	D getById(Integer id);
 
-	void delete(Long id, String usuario);
+	void delete(Integer id, String usuario);
 
 }

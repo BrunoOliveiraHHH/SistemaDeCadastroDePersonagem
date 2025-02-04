@@ -23,25 +23,25 @@ public class PersonagemService implements GenericService<Personagem, PersonagemD
     }
 
     @Override
-    public PersonagemDTO update(Long id, PersonagemDTO dado) {
+    public PersonagemDTO update(Integer id, PersonagemDTO dado) {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public void delete(Long id) {
+    public void delete(Integer id) {
         // TODO Auto-generated method stub
         
     }
 
     @Override
-    public PersonagemDTO getById(Long id) {
+    public PersonagemDTO getById(Integer id) {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public void delete(Long id, String usuario) {
+    public void delete(Integer id, String usuario) {
         // TODO Auto-generated method stub
         
     }

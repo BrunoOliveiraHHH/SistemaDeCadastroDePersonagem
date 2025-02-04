@@ -23,25 +23,25 @@ public class ClasseSalvaguardaService implements GenericService<ClasseSalvaguard
     }
 
     @Override
-    public ClasseSalvaguardaDTO update(Long id, ClasseSalvaguardaDTO dado) {
+    public ClasseSalvaguardaDTO update(Integer id, ClasseSalvaguardaDTO dado) {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public void delete(Long id) {
+    public void delete(Integer id) {
         // TODO Auto-generated method stub
         
     }
 
     @Override
-    public ClasseSalvaguardaDTO getById(Long id) {
+    public ClasseSalvaguardaDTO getById(Integer id) {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public void delete(Long id, String usuario) {
+    public void delete(Integer id, String usuario) {
         // TODO Auto-generated method stub
         
     }

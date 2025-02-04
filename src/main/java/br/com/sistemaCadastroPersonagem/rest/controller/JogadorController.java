@@ -37,7 +37,7 @@ public class JogadorController {
 
     @GetMapping(value = "/consulta/{id}", produces = MediaType.APPLICATION_JSON)
     @PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')")
-    public ResponseEntity<JogadorDTO> getById(@PathVariable Long id) {
+    public ResponseEntity<JogadorDTO> getById(@PathVariable Integer id) {
         JogadorDTO dto = this.service.getById(id);
         return new ResponseEntity<JogadorDTO>(dto, HttpStatus.OK);
     }
@@ -51,7 +51,7 @@ public class JogadorController {
 
     @PutMapping(value = "/alterar/{id}", produces = MediaType.APPLICATION_JSON, consumes = MediaType.APPLICATION_JSON)
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public ResponseEntity<JogadorDTO> update(@PathParam("id") Long id, @RequestBody JogadorDTO dtoInput) {
+    public ResponseEntity<JogadorDTO> update(@PathParam("id") Integer id, @RequestBody JogadorDTO dtoInput) {
         JogadorDTO dto = this.service.update(id, dtoInput);
         return new ResponseEntity<JogadorDTO>(dto, HttpStatus.NO_CONTENT);
     }
@@ -59,7 +59,7 @@ public class JogadorController {
     @SuppressWarnings("rawtypes")
     @GetMapping(value = "/excluir/{id},{usuario}")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public ResponseEntity delete(@PathParam("id") Long id, @PathParam("usuario") String usuario) {
+    public ResponseEntity delete(@PathParam("id") Integer id, @PathParam("usuario") String usuario) {
         service.delete(id, usuario);
         return new ResponseEntity(HttpStatus.OK);
     }

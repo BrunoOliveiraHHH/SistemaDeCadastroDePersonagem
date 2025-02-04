@@ -23,27 +23,26 @@ public class JogadorService implements GenericService<Jogador, JogadorDTO> {
     }
 
     @Override
-    public JogadorDTO update(Long id, JogadorDTO dado) {
+    public JogadorDTO update(Integer id, JogadorDTO dado) {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public void delete(Long id) {
+    public void delete(Integer id) {
         // TODO Auto-generated method stub
         
     }
 
     @Override
-    public JogadorDTO getById(Long id) {
+    public JogadorDTO getById(Integer id) {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public void delete(Long id, String usuario) {
+    public void delete(Integer id, String usuario) {
         // TODO Auto-generated method stub
         
     }
-
 }

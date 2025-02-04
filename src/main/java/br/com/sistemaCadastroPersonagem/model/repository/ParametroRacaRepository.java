@@ -10,4 +10,6 @@ import br.com.sistemaCadastroPersonagem.model.entity.ParametroRaca;
 @Repository
 public interface ParametroRacaRepository extends JpaRepository<ParametroRaca, Integer>, JpaSpecificationExecutor<ParametroRaca>, CrudRepository<ParametroRaca, Integer> {
 
+	ParametroRaca findByNome(String nome);
+
 }

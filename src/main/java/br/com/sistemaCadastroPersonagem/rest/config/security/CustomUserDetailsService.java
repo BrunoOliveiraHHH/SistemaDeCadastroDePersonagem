@@ -12,8 +12,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import br.com.sistemaCadastroPersonagem.model.entity.Users; // Assuming a User entity exists
-import br.com.sistemaCadastroPersonagem.model.repository.UserRepository; // Assuming a UserRepository exists
+import br.com.sistemaCadastroPersonagem.model.entity.Users;
+import br.com.sistemaCadastroPersonagem.model.repository.UserRepository;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
