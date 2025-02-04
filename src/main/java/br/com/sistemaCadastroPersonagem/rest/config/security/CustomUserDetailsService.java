@@ -6,12 +6,13 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import br.com.sistemaCadastroPersonagem.model.entity.User; // Assuming a User entity exists
+import br.com.sistemaCadastroPersonagem.model.entity.Users; // Assuming a User entity exists
 import br.com.sistemaCadastroPersonagem.model.repository.UserRepository; // Assuming a UserRepository exists
 
 @Service
@@ -22,13 +23,13 @@ public class CustomUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userRepository.findByUsername(username);
+    	Users user = userRepository.findByUsername(username);
 
         Set<GrantedAuthority> authorities = user.getRoles().stream()
                 .map((roles) -> new SimpleGrantedAuthority(roles.getName()))
                 .collect(Collectors.toSet());
 
-        return new org.springframework.security.core.userdetails.User(
+        return new User(
                 username,
                 user.getPassword(),
                 authorities
